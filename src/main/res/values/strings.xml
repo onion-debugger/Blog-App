@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Post App</string>
+    <string name="secondary_text">This is the body</string>
+    <string name="title">Title</string>
+    <string name="comments">Comments</string>
+    <string name="add_post">add post</string>
+    <string name="btn_comment">Comment</string>
+    <string name="field_comment">Write a comment</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="create_new_post">Add a Post</string>
+    <string name="add_post_title">Title</string>
+    <string name="post_title_label">Add a body</string>
+    <string name="add_comment">Add comment</string>
+</resources>

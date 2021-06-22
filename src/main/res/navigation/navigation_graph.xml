@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/postsFragment">
+
+    <fragment
+        android:id="@+id/postsFragment"
+        android:name="com.decagon.android.sq007.ui.PostsFragment"
+        android:label="PostsFragment" >
+        <action
+            android:id="@+id/action_postsFragment_to_commentFragment"
+            app:destination="@id/commentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/commentFragment"
+        android:name="com.decagon.android.sq007.ui.CommentFragment"
+        android:label="CommentFragment" >
+        <action
+            android:id="@+id/action_commentFragment_to_addCommentFragment"
+            app:destination="@id/addCommentFragment" />
+        <argument
+            android:name="postModel"
+            app:argType="com.decagon.android.sq007.model.PostDataModel" />
+        <argument
+            android:name="commentModel"
+            app:argType="com.decagon.android.sq007.model.CommentDataModel"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCommentFragment"
+        android:name="com.decagon.android.sq007.ui.AddCommentFragment"
+        android:label="add_comment_fragment"
+        tools:layout="@layout/add_comment_fragment" >
+        <action
+            android:id="@+id/action_addCommentFragment_to_commentFragment"
+            app:destination="@id/commentFragment" />
+        <argument
+            android:name="postModel"
+            app:argType="com.decagon.android.sq007.model.PostDataModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPostFragment"
+        android:name="com.decagon.android.sq007.ui.AddPostFragment"
+        android:label="fragment_add_post"
+        tools:layout="@layout/fragment_add_post" />
+</navigation>
